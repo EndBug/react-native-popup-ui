@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { ViewProps, Animated } from 'react-native'
 
 // #region Root
-interface RootProps extends ViewProps {
+interface RootProps extends ViewProps, Record<string, any> {
   style?: Record<string, any> | number | any[]
 }
 
