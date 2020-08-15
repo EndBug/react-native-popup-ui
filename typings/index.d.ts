@@ -8,7 +8,8 @@ interface RootProps extends ViewProps, Record<string, any> {
 
 export class Root extends Component {
   props: RootProps
-  constructor(props: RootProps[''])
+  constructor(props: RootProps)
+
   render(): JSX.Element
 }
 // #endregion
@@ -35,6 +36,9 @@ interface PopupState extends PopupParams {
 }
 
 export class Popup extends Component {
+  props: PopupConfig
+  constructor(props: PopupConfig)
+
   static popupInstance?: Popup
   static show: (config: PopupConfig) => void
   static hide: () => void
@@ -62,6 +66,9 @@ interface ToastState extends ToastParams {
 }
 
 export class Toast extends Component {
+  props: ToastConfig
+  constructor(props: ToastConfig)
+
   static toastInstance: Toast
   static show: (config: ToastConfig) => void
   static hide: () => void
