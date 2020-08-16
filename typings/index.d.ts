@@ -25,7 +25,7 @@ interface PopupParams {
   background: string
   timing: number
   autoclose: boolean
-  icon: Component
+  icon: any
 }
 type PopupConfig = Partial<PopupParams>
 interface PopupState extends PopupParams {
@@ -58,7 +58,7 @@ interface ToastParams {
   text: string
   color: string
   timing: number
-  icon: Component
+  icon: any
 }
 type ToastConfig = Partial<ToastParams>
 interface ToastState extends ToastParams {
